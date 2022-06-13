@@ -59,11 +59,11 @@ public class PlayerInput : MonoBehaviour
         
     if(Input.GetKeyDown(KeyCode.LeftShift))
         {
-           GameObject.Find("Player").GetComponent<PlayerMovement>().moveSpeed=30f;
+           GameObject.Find("Player").GetComponent<PlayerMovement>().moveSpeed=25f;
         }  
     if(Input.GetKeyUp(KeyCode.LeftShift))
     {
-        GameObject.Find("Player").GetComponent<PlayerMovement>().moveSpeed=5f;
+        GameObject.Find("Player").GetComponent<PlayerMovement>().moveSpeed=15f;
     }
 
     }
