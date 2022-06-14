@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Part1Ball
   - Coin
+  - rollingplatform
+  - Floor
   layers:
   - Default
   - TransparentFX
