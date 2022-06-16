@@ -8,6 +8,8 @@ TagManager:
   - Coin
   - rollingplatform
   - Floor
+  - Part1Key
+  - Part1Back
   layers:
   - Default
   - TransparentFX

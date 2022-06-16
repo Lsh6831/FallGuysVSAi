@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class RollingPlatform : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float speed = 1f;
+    
     void FixedUpdate()
     {
-        transform.Rotate(new Vector3(0, 0, 22) * Time.deltaTime);
+        transform.Rotate(new Vector3(0, 0, 22) * Time.deltaTime*speed);
     }
 }

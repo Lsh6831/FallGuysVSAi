@@ -10,24 +10,25 @@ public class Part2Key : MonoBehaviour
     public int part2Score;
     public GameObject gate2;
 
+    Animator anim;
+
     private void Start()
     {
-        
+        anim=GameObject.Find("Gate2").GetComponent<Animator>();
     }
   
     private void OnTriggerEnter(Collider other)
     {
-        //Ãæµ¿ÇÑ »ó´ë¹æ °ÔÀÓ ¿ÀºêÁ§Æ®°¡ Coin ÅÂ±×¸¦ °¡Á³³ª¿ä?
+        //ï¿½æµ¿ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ Coin ï¿½Â±×¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?
         if (other.tag == "Coin"&&part2Coin<4)
         {
             part2Coin++;
-            other.gameObject.SetActive(false);
+           
         }
         else if(other.tag == "Coin" && part2Coin ==4)
         {
             part2Coin++;
-            other.gameObject.SetActive(false);
-            gate2.SetActive(false);
+           anim.SetBool("open",true);
 
         }
         Debug.Log(part2Coin);

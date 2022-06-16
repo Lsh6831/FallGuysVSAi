@@ -10,7 +10,7 @@ public class Part1Key : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //충동한 상대방 게임 오브젝트가 Part1Ball 태그를 가졌나요?
-        if(other.tag == "Part1Ball")
+        if(other.tag == "Part1Key")
         {
             gategard.SetActive(false);
             Debug.Log("충돌함");
