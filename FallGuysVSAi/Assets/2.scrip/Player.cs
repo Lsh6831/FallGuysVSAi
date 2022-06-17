@@ -8,12 +8,15 @@ public class Player : MonoBehaviour
     float vAxis;
     bool walkDown;
     bool jumpDown;
+    bool fireDown;
+    bool isFireReady = false;
 
-    bool isJump=false;
+    bool isJump;
     bool isDodge;
 
     public float speed = 20f;
     public float jumpForse = 100f;
+    float fireDelay;
 
     Rigidbody rigid;
     Animator anim;
@@ -24,10 +27,15 @@ public class Player : MonoBehaviour
     Vector3 moveVec;
     Vector3 dodgeVec;
 
+    Weapon equipWeapon;
+
+    float rate2;
+
     void Start()
     {
         rigid = GetComponent<Rigidbody>();
         anim = GetComponentInChildren<Animator>();
+        rate2 = GameObject.Find("Weapon Hammer").GetComponent<Weapon>().rate;
     }
 
     
@@ -37,6 +45,7 @@ public class Player : MonoBehaviour
         Move();
         Turn();
         Jump();
+        Attack();
         Dodge();
     }
 
@@ -46,6 +55,7 @@ public class Player : MonoBehaviour
         vAxis = Input.GetAxisRaw("Vertical");
         walkDown = Input.GetButton("Walk");
         jumpDown = Input.GetButtonDown("Jump");
+        fireDown = Input.GetButtonDown("Fire1");
 
     }
     void Move()
@@ -78,6 +88,22 @@ public class Player : MonoBehaviour
             anim.SetBool("isJump",true);
             anim.SetTrigger("doJump");
             isJump = true;
+        }
+    }
+
+    void Attack()
+    {
+        fireDelay += Time.deltaTime;    
+        // isFireReady = equipWeapon.rate < fireDelay;
+        isFireReady = rate2 < fireDelay;
+
+        if(fireDown && isFireReady && !isDodge)
+        {
+            Debug.Log("오류");
+            // equipWeapon.Use();
+            GameObject.Find("Weapon Hammer").GetComponent<Weapon>().Use();
+            anim.SetTrigger("doSwing");
+            fireDelay=0;
         }
     }
      void Dodge()

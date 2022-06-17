@@ -10,6 +10,7 @@ TagManager:
   - Floor
   - Part1Key
   - Part1Back
+  - Hamma
   layers:
   - Default
   - TransparentFX

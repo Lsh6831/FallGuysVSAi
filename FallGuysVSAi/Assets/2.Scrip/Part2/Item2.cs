@@ -6,6 +6,7 @@ public class Item2 : MonoBehaviour
 {
     public float speed = 4f;
     public GameObject particle;
+        
     void FixedUpdate()
     {
         transform.Rotate(new Vector3(00, 22, 0) * Time.deltaTime*speed);
@@ -16,19 +17,20 @@ public class Item2 : MonoBehaviour
         {
             // StopCoroutine("Particle");
             // StartCoroutine("Particle");
+            Debug.Log("충돌");
+
             particle.SetActive(true);
             gameObject.SetActive(false);
             Invoke("ParticleStop",3f);
-            Invoke("Regen",6f);
+            Invoke("Regen",6f); 
         }
-    }
-   
-    private void ParticleStop()
+    }   
+    public void ParticleStop()
     {
         particle.SetActive(false);
     }
 
-    private void Regen()
+    public void Regen()
     {
          gameObject.SetActive(true);
     }

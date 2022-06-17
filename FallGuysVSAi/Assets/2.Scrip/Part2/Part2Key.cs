@@ -16,6 +16,16 @@ public class Part2Key : MonoBehaviour
     {
         anim=GameObject.Find("Gate2").GetComponent<Animator>();
     }
+    // public void Coin()
+    // {
+    //     float score = 0f;
+    //     score++;
+       
+    //     if(score<4)
+    //     {
+    //         score++;
+    //     }
+    // }
   
     private void OnTriggerEnter(Collider other)
     {
@@ -23,18 +33,21 @@ public class Part2Key : MonoBehaviour
         if (other.tag == "Coin"&&part2Coin<4)
         {
             part2Coin++;
+            Debug.Log("++");
            
         }
         else if(other.tag == "Coin" && part2Coin ==4)
         {
             part2Coin++;
-           anim.SetBool("open",true);
+            anim.SetBool("open",true);   
+          
 
         }
-        Debug.Log(part2Coin);
+       Debug.Log(part2Coin);
         
 
     }
+
     //private void CoinCount(int newCoin)
     //{
     //    if(part2Coin<4)
@@ -52,3 +65,4 @@ public class Part2Key : MonoBehaviour
     //}
   
 }
+
