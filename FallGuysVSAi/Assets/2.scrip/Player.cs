@@ -9,7 +9,8 @@ public class Player : MonoBehaviour
     bool walkDown;
     bool jumpDown;
     bool fireDown;
-    bool isFireReady = false;
+    bool isFireReady = true;
+    bool isBorder;
 
     bool isJump;
     bool isDodge;
@@ -31,6 +32,7 @@ public class Player : MonoBehaviour
 
     float rate2;
 
+  
     void Start()
     {
         rigid = GetComponent<Rigidbody>();
@@ -47,6 +49,7 @@ public class Player : MonoBehaviour
         Jump();
         Attack();
         Dodge();
+        
     }
 
     void GetInput()
@@ -66,8 +69,15 @@ public class Player : MonoBehaviour
         {
             moveVec = dodgeVec;
         }
+        if(!isFireReady)
+        {
+            moveVec = Vector3.zero;
+        }
+        if(!isBorder)
+        {
         transform.position += moveVec * speed *(walkDown ? 0.3f:1f) * Time.deltaTime;
         //                                      삼항연산자
+        }
 
         anim.SetBool("isRun",moveVec !=Vector3.zero);
         anim.SetBool("isWalk",walkDown);
@@ -99,7 +109,7 @@ public class Player : MonoBehaviour
 
         if(fireDown && isFireReady && !isDodge)
         {
-            Debug.Log("오류");
+            
             // equipWeapon.Use();
             GameObject.Find("Weapon Hammer").GetComponent<Weapon>().Use();
             anim.SetTrigger("doSwing");
@@ -132,5 +142,14 @@ public class Player : MonoBehaviour
             anim.SetBool("isJump",false);
             isJump = false;
         }
+    }
+      private void FixedUpdate() 
+    {
+        StopToWall();
+    }
+    void StopToWall()
+    {
+        Debug.DrawRay(transform.position, transform.forward*2,Color.green);
+        isBorder = Physics.Raycast(transform.position,transform.forward,2,LayerMask.GetMask("Wall"));
     }
 }
