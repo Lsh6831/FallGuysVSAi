@@ -43,7 +43,7 @@ public class Part2Key : MonoBehaviour
           
 
         }
-       Debug.Log(part2Coin);
+        Debug.Log(part2Coin);
         
 
     }

@@ -21,7 +21,6 @@ private void Awake()
             Vector3 reactVec = transform.position - other.transform.position;
             
             OnHit(reactVec);
-            Debug.Log(reactVec);
             
         }
     } 

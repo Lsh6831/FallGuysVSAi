@@ -12,6 +12,11 @@ TagManager:
   - Part1Back
   - Hamma
   - Wall
+  - Water
+  - P3SpawnPoint1
+  - P3SpawnPoint2
+  - P3SpawnPoint3
+  - Ball
   layers:
   - Default
   - TransparentFX
@@ -48,4 +53,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: New Layer
+    uniqueID: 1486503147
     locked: 0
