@@ -5,16 +5,26 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
+<<<<<<< Updated upstream
       ticks: 637907010879745634
     m_Hash: 295236886
+=======
+      ticks: 637904254871375666
+    m_Hash: 4232660727
+>>>>>>> Stashed changes
   m_LockFileStatus:
     m_FilePath: D:/Unity/GitHub/FallGuysVSAi/FallGuysVSAi/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
+<<<<<<< Updated upstream
       ticks: 637907010891242241
     m_Hash: 4187645104
+=======
+      ticks: 637904254964730406
+    m_Hash: 398154054
+>>>>>>> Stashed changes
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
