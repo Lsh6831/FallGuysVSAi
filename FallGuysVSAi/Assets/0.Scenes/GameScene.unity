@@ -835,6 +835,7 @@ GameObject:
   m_Component:
   - component: {fileID: 78308195}
   - component: {fileID: 78308194}
+  - component: {fileID: 78308196}
   m_Layer: 0
   m_Name: Part4GateKey1(1)
   m_TagString: Untagged
@@ -869,6 +870,18 @@ Transform:
   m_Father: {fileID: 495900847}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &78308196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78308193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77eb527fe459d7d42ab007ae527371e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &85605803
 GameObject:
   m_ObjectHideFlags: 0
@@ -11080,7 +11093,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabs:
   - {fileID: 5626598509938386498, guid: 5f990ffaa293ab14ebc81ec38b817d0b, type: 3}
-  - {fileID: 5582706981043939338, guid: 06936a55b05485345a333c0a16c38a1c, type: 3}
+  - {fileID: 7209417620919649187, guid: 10653eccf6b69fd47938a227b4bf3863, type: 3}
   count: 100
 --- !u!65 &1570580543
 BoxCollider:
@@ -13950,8 +13963,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcac80e24ae6178478d7de2decd2e8db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isGameover: 0
-  part2Gate: {fileID: 0}
 --- !u!4 &2101936648
 Transform:
   m_ObjectHideFlags: 0
@@ -14229,7 +14240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5903297864969995812, guid: 8f5e135a19626f544908fc8f156144b9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 465
+      value: 450
       objectReference: {fileID: 0}
     - target: {fileID: 5903297864969995812, guid: 8f5e135a19626f544908fc8f156144b9, type: 3}
       propertyPath: m_LocalPosition.y

@@ -5,17 +5,17 @@ using UnityEngine.UI;
 
 public class Part4Key : MonoBehaviour
 {
-    public GameObject gameOver;
+    // public GameObject gameOver;
     
     private void Awake()
-    {
-        gameOver.SetActive(false);
+    { 
+        // gameOver.SetActive(false);
     }
   private void OnTriggerEnter(Collider other) 
   {
    if(other.tag=="Ball")
    {
-    gameOver.SetActive(true);
+    // gameOver.SetActive(true);
     Debug.Log("게임종료");
    } 
   }
