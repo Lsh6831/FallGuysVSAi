@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
 
     Rigidbody rigid;
     Animator anim;
+    // Transform raiposiktion;
 
     
 
@@ -38,6 +39,7 @@ public class Player : MonoBehaviour
         rigid = GetComponent<Rigidbody>();
         anim = GetComponentInChildren<Animator>();
         rate2 = GameObject.Find("Weapon Hammer").GetComponent<Weapon>().rate;
+        // raiposition = transform.position+= p (0,1,0);
     }
 
     
