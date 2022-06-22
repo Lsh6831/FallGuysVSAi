@@ -6,9 +6,8 @@ using UnityEngine.UI;
 public class Part2Key : MonoBehaviour
 {
     private int part2Coin = 0;
-    private int maxPart2Coin = 5;
+    public int maxPart2Coin = 5;
     public int part2Score;
-    public GameObject gate2;
 
     Animator anim;
 
@@ -30,13 +29,13 @@ public class Part2Key : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //�浿�� ���� ���� ������Ʈ�� Coin �±׸� ��������?
-        if (other.tag == "Coin"&&part2Coin<4)
+        if (other.tag == "Coin"&&part2Coin<maxPart2Coin-1)
         {
             part2Coin++;
             Debug.Log("++");
            
         }
-        else if(other.tag == "Coin" && part2Coin ==4)
+        else if(other.tag == "Coin" && part2Coin ==maxPart2Coin-1)
         {
             part2Coin++;
             anim.SetBool("open",true);   
