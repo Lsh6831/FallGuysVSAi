@@ -17,6 +17,8 @@ TagManager:
   - P3SpawnPoint2
   - P3SpawnPoint3
   - Ball
+  - P2SpawnPoint1
+  - P4SpawnPoint1
   layers:
   - Default
   - TransparentFX
