@@ -21,11 +21,7 @@ public class Player : MonoBehaviour
 
     Rigidbody rigid;
     Animator anim;
-    // Transform raiposiktion;
-
-    
-
-    
+        
     Vector3 moveVec;
     Vector3 dodgeVec;
 
@@ -39,18 +35,21 @@ public class Player : MonoBehaviour
         rigid = GetComponent<Rigidbody>();
         anim = GetComponentInChildren<Animator>();
         rate2 = GameObject.Find("Weapon Hammer").GetComponent<Weapon>().rate;
-        // raiposition = transform.position+= p (0,1,0);
     }
 
     
     void Update()
     {
-        GetInput();
-        Move();
-        Turn();
-        Jump();
-        Attack();
-        Dodge();
+        if(GameManager.instance!=null&&GameManager.instance.gameStop==false)
+        {
+            GetInput();
+            Move();
+            Turn();
+            Jump();
+            Attack();
+            Dodge();
+        
+        }
         
     }
 
@@ -139,7 +138,7 @@ public class Player : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision) 
     {
-        if(collision.gameObject.tag=="Floor")
+        if(collision.gameObject.tag=="Floor")   
         {
             anim.SetBool("isJump",false);
             isJump = false;

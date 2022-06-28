@@ -35,6 +35,12 @@ public class Part2Key : MonoBehaviour
             Debug.Log("++");
            
         }
+        else if (other.tag == "Boom"&&part2Coin>0)
+        {
+            part2Coin--;
+            Debug.Log("--");
+           
+        }
         else if(other.tag == "Coin" && part2Coin ==maxPart2Coin-1)
         {
             part2Coin++;
@@ -43,6 +49,7 @@ public class Part2Key : MonoBehaviour
 
         }
         Debug.Log(part2Coin);
+        
         
 
     }

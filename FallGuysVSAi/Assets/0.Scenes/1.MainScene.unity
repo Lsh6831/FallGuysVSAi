@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: b95b0330320974749b81cacca29a130e, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -256,6 +256,7 @@ GameObject:
   - component: {fileID: 236490811}
   - component: {fileID: 236490810}
   - component: {fileID: 236490809}
+  - component: {fileID: 236490812}
   m_Layer: 5
   m_Name: Custum
   m_TagString: Untagged
@@ -326,7 +327,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 236490810}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 236490812}
+        m_TargetAssemblyTypeName: Button1, Assembly-CSharp
+        m_MethodName: Onclick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &236490810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,6 +378,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 236490807}
   m_CullTransparentMesh: 1
+--- !u!114 &236490812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236490807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d10b0ab4c870e642b964544aa429517, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: 3.Custum
 --- !u!1 &546830435
 GameObject:
   m_ObjectHideFlags: 0

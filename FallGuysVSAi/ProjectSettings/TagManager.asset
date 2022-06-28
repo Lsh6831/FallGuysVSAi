@@ -19,6 +19,7 @@ TagManager:
   - Ball
   - P2SpawnPoint1
   - P4SpawnPoint1
+  - Boom
   layers:
   - Default
   - TransparentFX

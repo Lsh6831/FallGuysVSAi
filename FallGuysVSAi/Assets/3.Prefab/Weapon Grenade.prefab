@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9137027046167411732
 Transform:
   m_ObjectHideFlags: 0
@@ -4816,9 +4816,10 @@ GameObject:
   - component: {fileID: 5873047776973551802}
   - component: {fileID: 6216701335174180732}
   - component: {fileID: 3324967398853060722}
+  - component: {fileID: 2992822040347571833}
   m_Layer: 0
   m_Name: Mesh Object
-  m_TagString: Untagged
+  m_TagString: Boom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4899,7 +4900,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  particle: {fileID: 0}
+  particle: {fileID: 3629737129088929688}
+--- !u!65 &2992822040347571833
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6490352389010560924}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.07499999, z: -0.075}
 --- !u!1 &7209417620919649187
 GameObject:
   m_ObjectHideFlags: 0
@@ -4911,7 +4925,7 @@ GameObject:
   - component: {fileID: 8018429946725390617}
   m_Layer: 0
   m_Name: Weapon Grenade
-  m_TagString: Untagged
+  m_TagString: Boom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

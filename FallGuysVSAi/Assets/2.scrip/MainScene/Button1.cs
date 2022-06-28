@@ -7,6 +7,7 @@ public class Button1 : MonoBehaviour
     public string sceneName;
     public void Onclick()
     {
+        Debug.Log("씬");
         SceneManager.LoadScene(sceneName);
     }
 }
